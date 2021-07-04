@@ -6,7 +6,7 @@ https://codeforces.com/blog/entry/67679
 https://codeforces.com/blog/entry/325
 https://codeforces.com/blog/entry/43256
 https://codeforces.com/blog/entry/23054
-
+https://www.hackerrank.com/topics/digit-dp
 https://www.hackerearth.com/practice/notes/trending/  
 
 https://blog.usejournal.com/500-data-structures-and-algorithms-practice-problems-35afe8a1e222
