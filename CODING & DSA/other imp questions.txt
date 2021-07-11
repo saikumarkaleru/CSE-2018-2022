@@ -1,0 +1,5 @@
+1) Find n-th lexicographically permutation of a string
+https://www.geeksforgeeks.org/find-n-th-lexicographically-permutation-string-set-2/
+
+2) 
+
