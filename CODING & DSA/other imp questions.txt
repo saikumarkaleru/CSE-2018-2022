@@ -2,4 +2,6 @@
 https://www.geeksforgeeks.org/find-n-th-lexicographically-permutation-string-set-2/
 
 2) 
+https://www.geeksforgeeks.org/count-derangements-permutation-such-that-no-element-appears-in-its-original-position/
 
+3) 
