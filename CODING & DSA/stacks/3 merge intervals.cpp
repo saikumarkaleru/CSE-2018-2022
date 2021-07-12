@@ -1,4 +1,10 @@
 class Solution {
+    bool  doesOverlap(Interval a, Interval b)
+{
+    return (min(a.end, b.end) >= max(a.start, b.start));
+}
+
+
 public:
     vector<vector<int>> merge(vector<vector<int>>& intervals) {
        
