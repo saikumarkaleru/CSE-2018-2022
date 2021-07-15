@@ -282,3 +282,74 @@ int main () {
   std::cout << (foo.size()-foo.count()) << " zeros.\n";
   return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+Remove the jth object from the subset (set the jth bit from 1 to    
+0):
+use the bitwise AND operation A &= ∼(1 << j).
+
+    A = 42 (base 10) = 101010 (base 2)
+    j = 1, ~(1 << j) = 111101 <- '~' is the bitwise NOT operation
+                                      
+ To toggle (flip the status of) the j-th item of the set:
+   use the bitwise XOR operation A ∧ = (1 << j).
+
+   For example:       A = 40 (base 10) = 101000 (base 2)
+                      j = 2, (1 << j)  = 000100 <- bit '1' is shifted to the left 2 times
+                                        -------- XOR <- true if both bits are different
+
+
+To get the value of the least significant bit that is on (first from the right):
+   use T = (A & (-A)).
+
+computer architecture.....(just flip after the Least Set Bit on) 
+
+   For example:     A =  40 (base 10) = 000...000101000 (32 bits, base 2)
+                   -A = -40 (base 10) = 111...111011000 (two's complement)
+                                       ----------------- AND
+
+->
+Get the position of rightmost unset bit
+
+int getPosOfRightmostSetBit(int n) 
+{ 
+    return log2(n&-n)+1; 
+} 
+  
+// function to get the position of rightmost unset bit 
+int getPosOfRightMostUnsetBit(int n) 
+{ 
+    // if n = 0, return 1 
+    if (n == 0) 
+        return 1; 
+      
+    // if all bits of 'n' are set 
+    if ((n & (n + 1)) == 0)     
+        return -1; 
+      
+    // position of rightmost unset bit in 'n' 
+    // passing ~n as argument 
+    return getPosOfRightmostSetBit(~n);    
+
+ int pos = getPosOfRightmostSetBit(~n);    
+     
+    // set the bit at position 'pos'
+    return ((1 << (pos - 1)) | n);     
+
+} 
+
+Iterate through all subsets of a subset y (not including empty set):
+
+
+           `for ( x = y; x > 0; x = ( y & (x-1) ) )`
+

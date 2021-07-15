@@ -94,3 +94,88 @@ public:
         return powerset;
     }
 };
+
+
+
+
+
+
+
+
+
+PRINT SUBSEQUENCES:
+
+
+#include <bits/stdc++.h>
+using namespace std;
+#define endl "\n"
+#define int long long int 
+void subsequences(vector<int> arr,int i,int n,vector<int> &temp)
+{
+    if(i==n)
+    {
+       for(int i:temp) cout<<i<<" ";
+       cout<<endl;
+        return;
+    }
+    temp.push_back(arr[i]);
+    subsequences(arr,i+1,n,temp);
+    temp.pop_back();
+    subsequences(arr,i+1,n,temp);  
+}
+int32_t main()
+{  
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);
+     cout.tie(0);
+    #ifndef ONLINE_JUDGE
+        freopen("C:/Users/welcome/Desktop/coding_stuf/codeforces/input.txt", "r", stdin);
+        freopen("C:/Users/welcome/Desktop/coding_stuf/codeforces/output.txt", "w", stdout);
+    #endif         
+       int test=1; 
+       cin>>test;
+       for(int tt=1;tt<=test;tt++) {
+        //cout<<" #"<<"test case #"<<i<<endl;
+          //cout<<"case #"<<tt<<": \n";
+          int n;
+          cin>>n;
+         vector<int>arr(n);
+       for(int i=0;i<n;i++) {
+           arr[i]=i;
+       }
+        vector<int> t;
+        subsequences(arr,0,n,t);
+     
+    }
+ 
+}
+ 
+
+
+⇒  PERMUTATIONS:
+void helper(vector<int>& nums,vector<vector<int>> &ans,vector<int> temp,int dp[]  )
+{
+    
+    if(temp.size()==nums.size()) {ans.push_back(temp);return;}
+    else if(temp.size() >=nums.size() ) return;
+    
+    for(int i=0;i<nums.size();i++)
+    {
+        if(dp[i]==0)
+        {
+            dp[i]=1; temp.push_back(nums[i]) ;
+            helper(nums,ans,temp,dp);
+
+            dp[i]=0;  temp.pop_back();
+
+        }
+    }
+    
+    
+}
+
+
+ 
+  
+    return C[n][k];
+}
