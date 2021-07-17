@@ -1,0 +1,93 @@
+
+
+
+⇒   Return the sum of min(x) for every subarray  https://binarysearch.com/problems/Every-Sublist-Min-Sum 
+If for each number num in nums, we imagine and let it become the minimum number and count how many sublists there are where num is the minimum, then we can get the solution by summing up every
+num * (number of subarrays where num is minimum)
+Now the question is, how do we compute the number of sublists where num is the minimum for every num? We can do this by computing two things for each num:
+The largest index left of num that has value smaller than num: call this prev_smaller[]
+The smallest index right of num that has value smaller than num: call this next_smaller[]
+With these two information, we can compute for each num, the number of sublists where num is the minimum by multiplying the number of elements between the previous smaller element and current element by the number of elements between the next smaller element and current element.
+Finally we can compute the solution by summing up every
+num * (number of subarrays where num is minimum)
+Implementation
+We can compute prev_smaller[] and next_smaller[] by using a Monotonous Queue.
+One caveat:
+we want to avoid edge cases like [1,1] where we count [1,1] twice. We can avoid this by making either of prev_smaller[] or next_smaller[] compute the <= instead of <
+Time Complexity
+\mathcal{O}(n)
+O(n) We iterate through n elements a constant number of times
+Space Complexity
+\mathcal{O}(n)
+O(n) We maintain auxiliary data structures each of size n
+import java.util.*;
+
+class Solution {
+    public int solve(int[] nums) {
+        int n = nums.length;
+        int[] next_smaller = new int[n];
+        int[] prev_smaller = new int[n];
+        Arrays.fill(next_smaller, n);
+        Arrays.fill(prev_smaller, -1);
+
+        // compute and fill in the next_smaller
+        Stack<Integer> stack = new Stack();
+        for (int i = 0; i < n; i++) {
+            int cur = nums[i];
+            while (stack.size() > 0 && cur < nums[stack.peek()]) {
+                next_smaller[stack.pop()] = i;
+            }
+            stack.push(i);
+        }
+        // compute and fill in the prev_smaller
+        stack = new Stack();
+        for (int i = 0; i < n; i++) {
+            int cur = nums[i];
+            while (stack.size() > 0 && nums[stack.peek()] > cur) {
+                stack.pop();
+            }
+            if (stack.size() > 0)
+                prev_smaller[i] = stack.peek();
+            stack.push(i);
+        }
+
+        // compute the answer
+        long res = 0;
+        long mod = (long) 1e9 + 7;
+        for (int i = 0; i < n; i++) {
+            int subarray_min = nums[i];
+
+            int left_count = i - prev_smaller[i]; // number of greater elements on the left
+            int right_count =
+                next_smaller[i] - i; // number of greater than or equal to  elements on right
+            res = res + (subarray_min * (left_count * right_count)) % mod;
+            res = res % mod;
+        }
+        return (int) res;
+    }
+}
+
+
+⇒ How do u find first unique number and there will be updation in each step 
+    deQueue and map
+
+class EarliestUnique {
+    deque<int> a;
+    unordered_map<int, int> c;
+
+    public:
+    EarliestUnique(vector<int>& nums) {
+        for (int x : nums) add(x);
+    }
+
+    void add(int x) {
+        a.push_back(x);
+        ++c[x];
+    }
+
+    int earliestUnique() {
+        while (!a.empty() && c[a.front()] > 1) a.pop_front();
+        return a.empty() ? -1 : a.front();
+    }
+};
+
