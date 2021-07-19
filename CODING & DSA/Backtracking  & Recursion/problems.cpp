@@ -101,8 +101,6 @@ public:
 
 
 
-
-
 PRINT SUBSEQUENCES:
 
 
@@ -173,9 +171,5 @@ void helper(vector<int>& nums,vector<vector<int>> &ans,vector<int> temp,int dp[]
     
     
 }
-
-
- 
-  
     return C[n][k];
 }
