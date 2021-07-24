@@ -1,0 +1,29 @@
+
+JVM:
+    Java virtual Machine(JVM) is a virtual Machine that provides runtime environment
+    to execute java byte code. The JVM doesn't understand Java typo, that's why you 
+    compile your *.java files to obtain *.class files that contain the bytecodes 
+    understandable by the JVM.
+
+    JVM control execution of every Java program. It enables features such as automated exception
+    handling, Garbage-collected heap.
+
+
+
+JRE : 
+    The Java Runtime Environment (JRE) provides the libraries, the Java Virtual Machine, 
+    and other components to run applets and applications written in the Java programming language. 
+    JRE does not contain tools and utilities such as compilers or debuggers for developing applets
+     and applications
+
+JRE =  JVM + libraries [ NO compilers and debuggers]
+
+
+
+
+JDK : 
+    The JDK also called Java Development Kit is a superset of the JRE,
+    and contains everything that is in the JRE, plus tools 
+    such as the compilers and debuggers necessary for developing applets and applications.
+
+JDK = JRE + compilers + debuggers 

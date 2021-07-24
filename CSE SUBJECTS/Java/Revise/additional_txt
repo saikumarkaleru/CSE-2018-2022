@@ -1,0 +1,10 @@
+Static Block in Java
+
+    A static block in a program is a set of statements which are executed by the JVM 
+    (Java Virtual Machine) before the main method. At the time of class loading, 
+    if we want to perform any task we can define that task inside the static block, 
+    this task will be executed at the time of class loading. In a class, any number of a
+    static block can be defined, and this static blocks will be executed from top to bottom
+
+
+
