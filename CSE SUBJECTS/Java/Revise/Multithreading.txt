@@ -1,0 +1,116 @@
+To create a thread, Java provides a class Thread and an interface Runnable both are 
+located into java.lang package.
+
+
+Life cycle of a Thread
+    New : A thread begins its life cycle in the new state. 
+            It remains in this state until the start() method is called on it.
+    Runnable : After invocation of start() method on new thread, the thread becomes runnable.
+    Running : A thread is in running state if the thread scheduler has selected it.
+    Waiting : A thread is in waiting state if it waits for another thread to perform a task.
+                In this stage the thread is still alive.
+    Terminated : A thread enter the terminated state when it complete its task
+
+
+
+Creating a thread in Java
+
+    To implement multithreading, Java defines two ways by which a thread can be created.
+
+    By implementing the Runnable interface.
+    By extending the Thread class.
+
+
+
+
+
+                    class MyThread implements Runnable
+            {
+                public void run()
+                {
+                    System.out.println("concurrent thread started running..");
+                }
+            }
+
+            class MyThreadDemo
+            {
+                public static void main(String args[])
+                {
+                    MyThread mt = new MyThread();
+                    Thread t = new Thread(mt);
+                    t.start();
+                }
+            }
+
+
+Extending Thread class
+
+            class MyThread extends Thread
+        {
+            public void run()
+            {
+                System.out.println("concurrent thread started running..");
+            }
+        }
+
+        classMyThreadDemo
+        {
+            public static void main(String args[])
+            {
+                MyThread mt = new  MyThread();
+                mt.start();
+            }
+        }
+
+
+
+
+
+
+
+Java Synchronization
+
+    Synchronization is a process of handling resource accessibility by multiple thread requests. 
+    The main purpose of synchronization is to avoid thread interference. At times when more than
+     one thread try to access a shared resource, we need to ensure that resource will be used by 
+     only one thread at a time. The process by which this is achieved is called synchronization. 
+    The synchronization keyword in java creates a block of code referred to as critical section.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

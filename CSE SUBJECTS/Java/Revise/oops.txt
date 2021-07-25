@@ -1,0 +1,77 @@
+What is OOPS?
+    OOPS is a programming approach which provides 
+    solution to real life problems with the help of algorithms based on real world. 
+
+Main Features of OOPS
+    Inheritence 
+    Polymorphism
+    Encapsulation
+    Abstraction
+
+
+
+Inheritance provided mechanism that allowed a class to inherit property of another class
+
+Purpose of Inheritance
+    It promotes the code reusabilty i.e the same methods and variables which are defined in a parent/super/base class can be used in the child/sub/derived class.
+    It promotes polymorphism by allowing method overriding.
+
+
+Types of Inheritance
+    Java mainly supports only three types of inheritance that are listed below.
+
+            1) Single Inheritance
+            2) Multilevel Inheritance
+            3) Heirarchical Inheritance
+
+    NOTE: Multiple inheritance is not supported in java
+
+***********************************************************************
+
+Why multiple inheritance is not supported in Java?
+    To remove ambiguity.
+    To provide more maintainable and clear design
+
+**********************************************************************************
+
+Aggregation:
+
+    In Java, aggregation represents HAS-A relationship, which means when a class contains 
+    reference of another class known to have aggregation
+
+
+Q. When to use Inheritance and Aggregation?
+
+    When you want to use some property or behaviour of any class without the requirement of 
+    modifying it or adding more functionality to it, in such case Aggregation is a better option 
+    because in case of Aggregation we are just using any external class inside our class as a 
+    variable.
+
+    Whereas when you want to use and modify some property or behaviour of any external class or 
+    may be want to add more function on top of it, its best to use Inheritance.
+
+
+
+Composition in Java
+    Composition is a more restricted form of Aggregation. Composition can be described
+     as when one class which includes another class, is dependent on it in such a way 
+     that it cannot functionally exist without the class which is included. 
+     For example a class Car cannot exist without Engine, as it won't be functional anymore.
+
+    Hence the word Composition which means the items something is made of and if we change the composition of things they change, similarly in Java classes, one class including another class is called a composition if the class included provides core functional meaning to the outer class.
+
+
+Q)Can we Override static method? Explain with reasons?
+    No, we cannot override static method. Because static method is bound to class whereas
+     method overriding is associated with object i.e at runtime.
+
+
+
+
+
+
+Upcasting in Java
+    When Parent class reference variable refers to Child class object, it is known as Upcasting. 
+    In Java this can be done and is helpful in scenarios where multiple child classes extends one
+     parent class.
+    In those cases we can create a parent class reference and assign child class objects to it.

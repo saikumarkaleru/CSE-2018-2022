@@ -1,0 +1,2 @@
+Package is a collection of related classes. 
+Java uses package to group related classes, interfaces and sub-packages in any Java project.

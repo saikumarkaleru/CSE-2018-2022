@@ -1,0 +1,16 @@
+
+
+collections 
+    
+
+
+    public boolean add(E e)	                            It inserts an element in this collection.
+    public boolean addAll(Collection<? extends E> c)	It inserts the specified collection elements in the invoking collection.
+    public boolean remove(Object element)	            It deletes an element from the collection.
+    public boolean removeAll(Collection<?> c)	        It deletes all the elements of the specified collection from the invoking collection.
+    default boolean removeIf(Predicate<? super E> filter)	It deletes all the elements of the collection that satisfy the specified predicate.
+    public boolean retainAll(Collection<?> c)	It deletes all the elements of invoking collection except the specified collection.
+    public int size()	It returns the total number of elements in the collection.
+    public void clear()	It removes the total number of elements from the collection.
+    public boolean contains(Object element)	It searches for an element.
+    public boolean containsAll(Collection<?> c)	It is used to search the specified collection in the collection.

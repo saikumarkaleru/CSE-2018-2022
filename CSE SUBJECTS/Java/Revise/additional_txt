@@ -8,3 +8,17 @@ Static Block in Java
 
 
 
+
+static and initializer block
+    We can have both static and initializer blocks in a Java program. 
+    But static block will execute first even before initializer block. 
+   
+
+
+
+
+
+
+Java uses Pass by Value (Call by Value)
+    https://www.geeksforgeeks.org/g-fact-31-java-is-strictly-pass-by-value/
+    

@@ -1,0 +1,24 @@
+
+
+An access modifier restricts the access of a class, 
+constructor, data member and method in another class.
+
+Java language has four access modifier to control access level for classes and its members.
+
+Default: Default has scope only inside the same package
+Public: Public has scope that is visible everywhere
+Protected: Protected has scope within the package and all sub classes
+Private: Private has scope only within the classes
+
+
+
+
+==========================================================================
+
+
+
+
+
+
+
+
