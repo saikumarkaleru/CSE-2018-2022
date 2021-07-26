@@ -1,0 +1,31 @@
+Our primary goals are:
+    • Provide a radically faster and widely accessible getting started experience for all Spring
+     development.
+    • Be opinionated out of the box, but get out of the way quickly as requirements start to 
+    diverge from the defaults.
+    • Provide a range of non-functional features that are common to large classes of projects 
+    (e.g. embedded servers, security, metrics, health checks, externalized configuration).
+    • Absolutely no code generation and no requirement for XML configuration.
+
+
+Spring Boot provides a number of starter dependencies for different Spring modules. Some of the most commonly used ones are:
+
+spring-boot-starter-data-jpa
+spring-boot-starter-security
+spring-boot-starter-test
+spring-boot-starter-web
+spring-boot-starter-thymeleaf
+
+
+The @EnableAutoConfiguration annotation
+    The second class-level annotation is @EnableAutoConfiguration. This annotation tells Spring
+    Boot to “guess” how you will want to configure Spring, based on the jar dependencies that you
+     have added. Since spring-boot-starter-web added Tomcat and Spring MVC, the auto-config
+
+
+
+
+The @SpringBootApplication annotation is equivalent to using 
+    @Configuration,
+    @EnableAutoConfiguration and 
+    @ComponentScan                  with their default attributes:

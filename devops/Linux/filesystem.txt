@@ -1,0 +1,22 @@
+UNIX:
+
+
+Root – it is the starting directory for Unix OS. Denoted by / 
+
+Etc – contains all configuration files of Unix OS. 
+
+Dev (devices) – contains all device files like drivers.  
+    A device file or special file is an interface for a device driver that appears in a file system as if it were  an ordinary file. There are also special device files in MS-DOS and Microsoft Windows. They allow  software to interact with a device driver using standard input/output system calls, which simplifies  many tasks and unifies user-space I/O mechanisms. 
+    Device files often provide simple interfaces to peripheral devices, such as printers. 
+
+
+Bin – stands for ‘binary’. Contains binary files. Binary files are files which can be run i.e, 
+    they are  executable files.  
+
+
+Lib – stands for ‘library files’. It contains all re-usable programs/data.  
+
+Mnt – stands for ‘mount’. Used for mounting external devices. It is also used for connecting external  storage devices like – HDD(hard disk drive), USB, DVD, C etc.  
+
+
+

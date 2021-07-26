@@ -1,0 +1,28 @@
+LInux distributons:
+    centos
+    fedora
+    ubuntu
+    redhat
+    debian
+    andriod
+    
+
+
+
+
+
+
+File permission
+ 
+chmod octal file 
+
+Change the permission of file to octal,which can be found separately for user,group,world by adding, 
+• 4-read(r) 
+• 2-write(w) 
+• 1-execute(x)
+
+
+
+
+
+
