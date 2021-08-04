@@ -74,3 +74,96 @@ public:
         return -1;
     }
 };
+
+
+
+
+
+
+
+//=============================================================================================
+
+class Solution {
+    
+   boolean searchRec(int[] nums, int target, int start, int end)
+{
+    if(start <= end)
+    {
+         int mid = start + (end-start)/2;
+        if(nums[mid] == target) return true;
+        
+        if(nums[mid]<nums[end]  && (nums[mid] < target && target <= nums[end]))
+            return searchRec(nums, target, mid+1, end);
+        
+        if(nums[start]<nums[mid]  && (nums[start] < target && target <= nums[mid]))
+            return searchRec(nums, target, start, mid-1);
+        
+          return searchRec(nums, target, start, mid-1) || 
+                   searchRec(nums, target, mid+1, end);
+        
+    }
+    return false;
+   
+}    
+    
+    public boolean search(int[] nums, int target) {
+      int start = 0, end = nums.length-1;
+    return searchRec(nums, target, 0, nums.length-1);    
+        
+    
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+=========================================================================================
+
+
+class Solution 
+{
+    int[] input;
+    int tar;
+    
+    public boolean search(int[] nums, int target) 
+    {
+        int index = 0;
+        input = nums;
+        tar = target;
+        
+        for(int i = 0; i <= nums.length - 2 ; i++)
+            if(nums[i] > nums[i+1]){
+                index = i;
+                break;
+            }
+        
+        return (binarySearch(0, index) || binarySearch(index + 1, nums.length - 1)); 
+    }
+    
+    public boolean binarySearch(int start, int end){
+        if(start <= end){
+            int mid = start +(end - start) / 2;
+            
+            if(input[mid] == tar) return true;
+            
+            else if(start == end) return false;
+            
+            else if(input[mid] >= tar) 
+                return binarySearch(start, mid);
+            
+            else 
+                return binarySearch(mid + 1, end);
+        }
+        return false;
+    }
+}
